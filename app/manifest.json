@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Figma Dark mode",
+  "version": "1.0",
+  "description": "Подмена стилей на www.figma.com",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "browser_action": {
+    "default_title": "Figma Dark mode"
+  },
+  "content_scripts": [
+    {
+      "matches": [ "https://*.figma.com/*"],
+      "js": [ "app.js" ]
+    }
+  ]
+}
